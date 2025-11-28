@@ -3,7 +3,7 @@
 
 -- Skapar databasen för en liten bokhandel
 CREATE DATABASE Bokhandel;
-USE Bokhandel;
+USE Bokhandel; --Använda databasen
  
  -- Skapar kundtabellen 
 CREATE TABLE Kunder (
@@ -14,7 +14,7 @@ Telefon VARCHAR(50),
 Adress VARCHAR(255)
 );
 
--- Skapar tabellen för bocker
+-- Skapar tabellen för böcker
 CREATE TABLE Bocker (
 BokID INT AUTO_INCREMENT PRIMARY KEY,
 Titel VARCHAR(255) NOT NULL,
@@ -24,7 +24,7 @@ Pris DECIMAL(10,2) NOT NULL CHECK (Pris > 0),
 Lagerstatus INT NOT NULL
 );
 
--- Skapar tabellen for bestallningar
+-- Skapar tabellen for beställningar
 CREATE TABLE Bestallningar (
 OrderID INT AUTO_INCREMENT PRIMARY KEY,
 KundID INT NOT NULL,
@@ -50,13 +50,13 @@ INSERT INTO Kunder (Namn, Email) VALUES
 ('Arya Stark', 'arya@email.com'),
 ('Tyrion Lannister', 'tyrion@email.com');
 
--- Infogar data i bocker
+-- Infogar data i böcker
 INSERT INTO Bocker (Titel, BokID, ISBN, Forfattare, Pris, Lagerstatus) VALUES
 ('A Song of Ice and Fire', '5585', '95-646-75-87', 'Johanna Swann', 399.00, 8),
 ('A Dance with Dragons', '5586', '45-646-35-86', 'Adam Holmshaw', 199.00, 10),
 ('A Clash of Kings', '5587', '25-456-35-85', 'Rosie Murphy', 299.00, 6);
 
--- Infogar data i bestallningar
+-- Infogar data i beställningar
 INSERT INTO Bestallningar (KundID, Datum, Totalbelopp) VALUE
 (1, '2024-10-15', 399.00), -- Jon koper 1 bocker
 (2, '2024-10-02', 598.00), -- Arya koper 2 bocker
@@ -75,7 +75,7 @@ INSERT INTO Orderrader (OrderID, BokID, Antal, Styckepris) VALUES
 INSERT INTO Orderrader (OrderID, BokID, Antal, Styckepris) VALUES
 (3, '5587', 1, 299.00);
 
--- Hamtar data fran de olika tabellerna
+-- Hämtar data från de olika tabellerna
 SELECT * FROM Bocker;
 SELECT * FROM Kunder;
 SELECT * FROM Bestallningar;
