@@ -3,7 +3,7 @@
 
 -- Skapar databasen för en liten bokhandel
 CREATE DATABASE Bokhandel;
-USE Bokhandel; --Använda databasen
+USE Bokhandel; -- Använda databasen
  
  -- Skapar kundtabellen 
 CREATE TABLE Kunder (
