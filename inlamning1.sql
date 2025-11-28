@@ -30,7 +30,7 @@ OrderID INT AUTO_INCREMENT PRIMARY KEY,
 KundID INT NOT NULL,
 Datum TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 Totalbelopp DECIMAL(10,2) NOT NULL,
-FOREIGN KEY (KundID) REFERENCES Kunder (KundID)
+FOREIGN KEY (KundID) REFERENCES Kunder (KundID) -- Lånar PK nycklen från Kunder (KundID)
 );
 
 -- Skapar tabellen for orderrader
@@ -40,8 +40,8 @@ BokID INT NOT NULL,
 OrderID INT NOT NULL, 
 Antal INT NOT NULL CHECK (Antal > 0),
 Styckepris DECIMAL(10,2) NOT NULL,
-FOREIGN KEY (BokID) REFERENCES Bocker (BokID),
-FOREIGN KEY (OrderID) REFERENCES Bestallningar (OrderID)
+FOREIGN KEY (BokID) REFERENCES Bocker (BokID), --Lånar PK nycklen från Böcker (BokID)
+FOREIGN KEY (OrderID) REFERENCES Bestallningar (OrderID) --Lånar PK nycklen från Beställningar (OrderID)
 );
 
 -- Infogar data i kunder
