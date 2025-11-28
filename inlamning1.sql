@@ -24,7 +24,7 @@ Pris DECIMAL(10,2) NOT NULL CHECK (Pris > 0),
 Lagerstatus INT NOT NULL
 );
 
--- Skapar tabellen for beställningar
+-- Skapar tabellen för beställningar
 CREATE TABLE Bestallningar (
 OrderID INT AUTO_INCREMENT PRIMARY KEY,
 KundID INT NOT NULL,
@@ -33,7 +33,7 @@ Totalbelopp DECIMAL(10,2) NOT NULL,
 FOREIGN KEY (KundID) REFERENCES Kunder (KundID) -- Lånar PK nycklen från Kunder (KundID)
 );
 
--- Skapar tabellen for orderrader
+-- Skapar tabellen för orderrader
 CREATE TABLE Orderrader (
 Orderrader INT AUTO_INCREMENT PRIMARY KEY,
 BokID INT NOT NULL,
