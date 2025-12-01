@@ -52,7 +52,7 @@ INSERT INTO Kunder (Namn, Email) VALUES
 
 -- Infogar data i böcker
 INSERT INTO Bocker (Titel, BokID, ISBN, Forfattare, Pris, Lagerstatus) VALUES
-('A Song of Ice and Fire', '5585', '95-646-75-87', 'Johanna Swann', 399.00, 8),
+('A Song of Ice and Fire', '5585', '95-646-75-87', 'Sam Thompson', 399.00, 8),
 ('A Dance with Dragons', '5586', '45-646-35-86', 'Adam Holmshaw', 199.00, 10),
 ('A Clash of Kings', '5587', '25-456-35-85', 'Rosie Murphy', 299.00, 6);
 
