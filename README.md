@@ -1,6 +1,6 @@
 ## Inlamning1 skapad av Johanna Swann YH25
 
-Jag har skapat en databas för en liten bokhandel som samlar infromation i olika tabeller samt beskriver deras relationer till varandra med hjälp av nycklar. 
+Jag har skapat en databas för en liten bokhandel som samlar infromation i olika tabeller och beskriver hur tabellerna hänger ihop med hjälp av nycklar (PK) och (FK).
 
 ## Databasen innehåller tabellerna
 * Kunder
