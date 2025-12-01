@@ -37,8 +37,8 @@ BokID INT NOT NULL,
 OrderID INT NOT NULL, 
 Antal INT NOT NULL CHECK (Antal > 0),
 Styckepris DECIMAL(10,2) NOT NULL,
-FOREIGN KEY (BokID) REFERENCES Bocker (BokID), -- Lånar PK nycklen från Böcker (BokID)
-FOREIGN KEY (OrderID) REFERENCES Bestallningar (OrderID) -- Lånar PK nycklen från Beställningar (OrderID)
+FOREIGN KEY (BokID) REFERENCES Bocker (BokID), -- Lånar PK från Böcker (BokID)
+FOREIGN KEY (OrderID) REFERENCES Bestallningar (OrderID) -- Lånar PK Beställningar (OrderID)
 );
 
 -- Infogar data i kunder
