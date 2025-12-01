@@ -1,6 +1,6 @@
 ## Inlamning1 skapad av Johanna Swann YH25
 
-Jag har skapat en databas för en liten bokhandel som lagrar infromation i tabellerna och beskriver deras relationer. 
+Jag har skapat en databas för en liten bokhandel som samlar infromation i olika tabeller samt beskriver deras relationer till varandra med hjälp av nycklar. 
 
 ## Databasen innehåller tabellerna
 * Kunder
