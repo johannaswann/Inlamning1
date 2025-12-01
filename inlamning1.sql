@@ -7,10 +7,10 @@ USE Bokhandel; -- Använda databasen
  
  -- Skapar kundtabellen 
 CREATE TABLE Kunder (
-KundID INT AUTO_INCREMENT PRIMARY KEY,
-Namn VARCHAR(100) NOT NULL,
-Email VARCHAR(255) UNIQUE NOT NULL,
-Telefon VARCHAR(50),
+KundID INT AUTO_INCREMENT PRIMARY KEY, -- Varje kund får ett unikt KundID 
+Namn VARCHAR(100) NOT NULL, -- Varje kund måste ha ett namn och kan inte lämnas tomt
+Email VARCHAR(255) UNIQUE NOT NULL, -- Måste finnas en unik email för varje kund
+Telefon VARCHAR(50), -- Telefon är frivilligt att registrera
 Adress VARCHAR(255)
 );
 
@@ -20,8 +20,8 @@ BokID INT AUTO_INCREMENT PRIMARY KEY,
 Titel VARCHAR(255) NOT NULL,
 ISBN VARCHAR(50) UNIQUE NOT NULL,
 Forfattare VARCHAR(255) NOT NULL,
-Pris DECIMAL(10,2) NOT NULL CHECK (Pris > 0),
-Lagerstatus INT NOT NULL
+Pris DECIMAL(10,2) NOT NULL CHECK (Pris > 0), -- Pris måste anges och vara större än 0
+Lagerstatus INT NOT NULL 
 );
 
 -- Skapar tabellen för beställningar
